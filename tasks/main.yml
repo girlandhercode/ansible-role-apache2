@@ -16,8 +16,6 @@
   apt: name={{ item }} state=latest
   with_items:
     - apache2
-    - apache2-bin
-    - apache2-data
     - apache2-doc
     - apache2-mpm-prefork
     - apache2-suexec-custom
