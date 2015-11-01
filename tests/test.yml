@@ -1,0 +1,7 @@
+---
+# test file for apache2
+
+- hosts: localhost
+  remote_user: root
+  roles:
+    - apache2

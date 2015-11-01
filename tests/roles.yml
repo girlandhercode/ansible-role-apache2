@@ -1,0 +1,5 @@
+---
+# roles file for apache2
+
+- src: https://github.com/pantarei/ansible-role-apache2
+  name: apache2
