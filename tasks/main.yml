@@ -8,16 +8,15 @@
 - name: apt-get purge
   apt: name={{ item }} state=absent purge=yes
   with_items:
+    - apache2-mpm-event
     - apache2-mpm-itk
-    - libapache2-mpm-itk
+    - apache2-mpm-worker
   tags: apache2
 
 - name: apt-get install
   apt: name={{ item }} state=latest
   with_items:
     - apache2
-    - apache2-bin
-    - apache2-data
     - apache2-doc
     - apache2-mpm-prefork
     - apache2-suexec-custom
@@ -26,32 +25,17 @@
     - libapache2-mod-rpaf
   tags: apache2
 
-- name: disable module
-  apache2_module: name={{ item }} state=absent
-  with_items:
-    - mpm_event
-    - mpm_worker
-  tags: apache2
-
 - name: enable module
   apache2_module: name={{ item }} state=present
   with_items:
     - actions
     - alias
-    - auth_basic
-    - auth_digest
-    - authn_core
-    - authn_file
-    - authz_core
-    - authz_host
-    - authz_user
     - autoindex
     - deflate
     - expires
     - fcgid
     - filter
     - mime
-    - mpm_prefork
     - negotiation
     - proxy
     - proxy_http
