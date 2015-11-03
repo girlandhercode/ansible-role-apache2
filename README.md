@@ -2,11 +2,11 @@ Apache2
 ====
 
 [![Build
-Status](https://travis-ci.org/pantarei/ansible-apache2.svg?branch=master)](https://travis-ci.org/pantarei/ansible-apache2)
+Status](https://travis-ci.org/pantarei/ansible-role-apache2.svg?branch=master)](https://travis-ci.org/pantarei/ansible-role-apache2)
 [![GitHub
-tag](https://img.shields.io/github/tag/pantarei/ansible-apache2.svg)](https://github.com/pantarei/ansible-apache2)
+tag](https://img.shields.io/github/tag/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2)
 [![GitHub
-license](https://img.shields.io/github/license/pantarei/ansible-apache2.svg)](https://github.com/pantarei/ansible-apache2)
+license](https://img.shields.io/github/license/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2)
 
 Ansible Role for Apache2 Installation.
 
@@ -47,7 +47,7 @@ License
 -------
 
 -   Code released under
-    [MIT](https://github.com/hswong3i/ansible-apache2/blob/master/LICENSE)
+    [MIT](https://github.com/hswong3i/ansible-role-apache2/blob/master/LICENSE)
 -   Docs released under [CC BY
     4.0](http://creativecommons.org/licenses/by/4.0/)
 
