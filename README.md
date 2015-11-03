@@ -1,5 +1,5 @@
 Apache2
-====
+=======
 
 [![Build
 Status](https://travis-ci.org/pantarei/ansible-role-apache2.svg?branch=master)](https://travis-ci.org/pantarei/ansible-role-apache2)
