@@ -25,23 +25,8 @@
 
 - name: enable module
   apache2_module: name={{ item }} state=present
-  with_items:
-    - actions
-    - alias
-    - autoindex
-    - deflate
-    - expires
-    - fcgid
-    - filter
-    - mime
-    - negotiation
-    - proxy
-    - proxy_http
-    - rewrite
-    - rpaf
-    - ssl
-    - status
-    - suexec
+  with_items: "{{ apache2_module_name }}"
+  when: apache2_module_name
   notify: restart apache2
   tags: apache2
 

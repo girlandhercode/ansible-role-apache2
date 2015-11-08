@@ -1,2 +1,19 @@
 ---
 # defaults file for apache2
+apache2_module_name:
+  - actions
+  - alias
+  - autoindex
+  - deflate
+  - expires
+  - fcgid
+  - filter
+  - mime
+  - negotiation
+  - proxy
+  - proxy_http
+  - rewrite
+  - rpaf
+  - ssl
+  - status
+  - suexec
