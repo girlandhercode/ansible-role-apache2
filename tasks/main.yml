@@ -1,20 +1,17 @@
 ---
 # tasks file for apache2
 
-- name: apt-get update
-  apt: update_cache=yes
-  tags: apache2
-
 - name: apt-get purge
-  apt: name={{ item }} state=absent purge=yes
+  apt: name="{{ item }}" state=absent purge=yes
   with_items:
     - apache2-mpm-event
     - apache2-mpm-itk
     - apache2-mpm-worker
+  notify: restart apache2
   tags: apache2
 
 - name: apt-get install
-  apt: name={{ item }} state=latest
+  apt: name="{{ item }}" state=latest
   with_items:
     - apache2
     - apache2-doc
@@ -23,27 +20,14 @@
     - apache2-utils
     - libapache2-mod-fcgid
     - libapache2-mod-rpaf
+  notify: restart apache2
   tags: apache2
 
 - name: enable module
-  apache2_module: name={{ item }} state=present
-  with_items:
-    - actions
-    - alias
-    - autoindex
-    - deflate
-    - expires
-    - fcgid
-    - filter
-    - mime
-    - negotiation
-    - proxy
-    - proxy_http
-    - rewrite
-    - rpaf
-    - ssl
-    - status
-    - suexec
+  apache2_module: name="{{ item }}" state=present
+  with_items: apache2_module_name
+  when: apache2_module_name is iterable
+  notify: restart apache2
   tags: apache2
 
 - name: enable service
