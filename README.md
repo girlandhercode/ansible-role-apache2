@@ -39,7 +39,7 @@ Role Variables
 <tr class="odd">
 <td align="left">apache2_module_name</td>
 <td align="left">no</td>
-<td align="left"><a href="https://github.com/pantarei/ansible-role-apache2/blob/master/defaults/main.yml">defaults/mail.yml</a></td>
+<td align="left"><a href="https://github.com/pantarei/ansible-role-apache2/blob/master/defaults/main.yml">defaults/main.yml</a></td>
 <td align="left"><ul>
 <li><code>null</code></li>
 <li><code>list</code></li>
