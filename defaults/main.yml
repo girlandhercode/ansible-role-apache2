@@ -1,5 +1,5 @@
 ---
-# defaults file for apache2
+# defaults file for hswong3i.apache2
 apache2_module_name:
   - actions
   - alias
