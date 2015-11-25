@@ -37,6 +37,34 @@ Role Variables
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">apache2_http_port</td>
+<td align="left">yes</td>
+<td align="left">80</td>
+<td align="left"></td>
+<td align="left">Apache2 HTTP listen port.</td>
+</tr>
+<tr class="even">
+<td align="left">apache2_https_port</td>
+<td align="left">yes</td>
+<td align="left">443</td>
+<td align="left"></td>
+<td align="left">Apache2 HTTPS listen port.</td>
+</tr>
+<tr class="odd">
+<td align="left">apahce2_timeout</td>
+<td align="left">yes</td>
+<td align="left">300</td>
+<td align="left"></td>
+<td align="left">Timeout: The number of seconds before receives and sends time out.</td>
+</tr>
+<tr class="even">
+<td align="left">apache2_log_level</td>
+<td align="left">yes</td>
+<td align="left">warn</td>
+<td align="left"></td>
+<td align="left">LogLevel: Control the severity of messages logged to the error_log.</td>
+</tr>
+<tr class="odd">
 <td align="left">apache2_module_name</td>
 <td align="left">no</td>
 <td align="left"><a href="https://github.com/pantarei/ansible-role-apache2/blob/master/defaults/main.yml">defaults/main.yml</a></td>
