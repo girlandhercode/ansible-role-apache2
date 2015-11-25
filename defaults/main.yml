@@ -1,5 +1,10 @@
 ---
 # defaults file for hswong3i.apache2
+
+apache2_http_port: 80
+apache2_https_port: 443
+apahce2_timeout: 300
+apache2_log_level: warn
 apache2_module_name:
   - actions
   - alias
