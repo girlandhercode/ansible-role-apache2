@@ -2,7 +2,10 @@
 # tasks file for hswong3i.apache2
 
 - name: apt-get purge
-  apt: name="{{ item }}" state=absent purge=yes
+  apt:
+    name="{{ item }}"
+    state=absent
+    purge=yes
   with_items:
     - apache2-mpm-event
     - apache2-mpm-itk
@@ -11,7 +14,9 @@
   tags: hswong3i.apache2
 
 - name: apt-get install
-  apt: name="{{ item }}" state=latest
+  apt:
+    name="{{ item }}"
+    state=latest
   with_items:
     - apache2
     - apache2-doc
@@ -37,9 +42,10 @@
   tags: hswong3i.apache2
 
 - name: enable module
-  apache2_module: name="{{ item }}" state=present
+  apache2_module:
+    name="{{ item }}"
+    state=present
   with_items: apache2_module_name
-  when: apache2_module_name is iterable
   notify: restart apache2
   tags: hswong3i.apache2
 

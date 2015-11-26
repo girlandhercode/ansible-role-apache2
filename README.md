@@ -69,10 +69,10 @@ Role Variables
 <td align="left">no</td>
 <td align="left"><a href="https://github.com/pantarei/ansible-role-apache2/blob/master/defaults/main.yml">defaults/main.yml</a></td>
 <td align="left"><ul>
-<li><code>null</code></li>
+<li><code>[]</code></li>
 <li><code>list</code></li>
 </ul></td>
-<td align="left">Skip enable module if <code>null</code>, or pass <code>list</code> as <code>name</code> to <a href="http://docs.ansible.com/ansible/apache2_module_module.html">apache2_module module</a>.</td>
+<td align="left">Skip enable module if <code>[]</code>, or pass <code>list</code> as <code>name</code> to <a href="http://docs.ansible.com/ansible/apache2_module_module.html">apache2_module module</a>.</td>
 </tr>
 </tbody>
 </table>
