@@ -81,6 +81,7 @@ Dependencies
 ------------
 
 -   [hswong3i.apt](https://galaxy.ansible.com/detail#/role/5970)
+-   [hswong3i.ufw](https://galaxy.ansible.com/detail#/role/6153)
 
 Example Playbook
 ----------------
