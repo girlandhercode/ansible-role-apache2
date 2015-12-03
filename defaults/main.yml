@@ -11,14 +11,14 @@ apache2_module_name:
   - autoindex
   - deflate
   - expires
-  - fcgid
   - filter
   - mime
+  - mpm_event
   - negotiation
   - proxy
+  - proxy_fcgi
   - proxy_http
   - rewrite
   - rpaf
   - ssl
   - status
-  - suexec
