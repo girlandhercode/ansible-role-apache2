@@ -26,6 +26,7 @@
     - apache2-utils
     - libapache2-mod-fastcgi
     - libapache2-mod-rpaf
+    - ufw
   notify: restart apache2
   tags: hswong3i.apache2
 
