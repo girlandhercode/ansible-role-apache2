@@ -1,6 +1,15 @@
 ---
 # tasks file for hswong3i.apache2
 
+- name: apt-add-repository
+  apt_repository:
+    repo="{{ item }}"
+    state=present
+  with_items:
+    - deb http://archive.ubuntu.com/ubuntu/ trusty multiverse
+    - deb-src http://archive.ubuntu.com/ubuntu/ trusty multiverse
+  tags: hswong3i.apache2
+
 - name: apt-get purge
   apt:
     name="{{ item }}"
