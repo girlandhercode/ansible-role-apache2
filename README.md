@@ -51,7 +51,7 @@ Role Variables
 <td align="left">Apache2 HTTPS listen port.</td>
 </tr>
 <tr class="odd">
-<td align="left">apahce2_timeout</td>
+<td align="left">apache2_timeout</td>
 <td align="left">yes</td>
 <td align="left">300</td>
 <td align="left"></td>
