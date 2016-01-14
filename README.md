@@ -2,9 +2,9 @@ Ansible Role for Apache2
 ========================
 
 [![Build Status](https://travis-ci.org/pantarei/ansible-role-apache2.svg?branch=master)](https://travis-ci.org/pantarei/ansible-role-apache2)
- [![GitHub tag](https://img.shields.io/github/tag/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2)
- [![GitHub license](https://img.shields.io/github/license/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2/blob/master/LICENSE)
- [![Ansible Role](https://img.shields.io/ansible/role/5972.svg)](https://galaxy.ansible.com/detail#/role/5972)
+[![GitHub tag](https://img.shields.io/github/tag/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2)
+[![GitHub license](https://img.shields.io/github/license/pantarei/ansible-role-apache2.svg)](https://github.com/pantarei/ansible-role-apache2/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/ansible/role/5972.svg)](https://galaxy.ansible.com/detail#/role/5972)
 
 Ansible Role for Apache2 Installation.
 
