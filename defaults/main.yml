@@ -6,10 +6,19 @@ apache2_https_port: 443
 apache2_timeout: 300
 apache2_log_level: warn
 apache2_module_name: [
+  'access_compat',
   'actions',
   'alias',
+  'auth_basic',
+  'authn_core',
+  'authn_file',
+  'authz_core',
+  'authz_host',
+  'authz_user',
   'autoindex',
   'deflate',
+  'dir',
+  'env',
   'expires',
   'filter',
   'mime',
@@ -19,7 +28,7 @@ apache2_module_name: [
   'proxy_fcgi',
   'proxy_http',
   'rewrite',
-  'rpaf',
+  'setenvif',
   'ssl',
   'status',
 ]

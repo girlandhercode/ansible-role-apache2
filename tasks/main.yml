@@ -6,8 +6,7 @@
     repo="{{ item }}"
     state=present
   with_items:
-    - deb http://archive.ubuntu.com/ubuntu/ trusty multiverse
-    - deb-src http://archive.ubuntu.com/ubuntu/ trusty multiverse
+    - ppa:ondrej/apache2
   tags: hswong3i.apache2
 
 - name: apt-get purge
@@ -20,7 +19,9 @@
     - apache2-mpm-prefork
     - apache2-mpm-worker
     - apache2-suexec-custom
+    - libapache2-mod-fastcgi
     - libapache2-mod-fcgid
+    - libapache2-mod-rpaf
   notify: restart apache2
   tags: hswong3i.apache2
 
@@ -30,11 +31,10 @@
     state=latest
   with_items:
     - apache2
+    - apache2-bin
+    - apache2-data
     - apache2-doc
-    - apache2-mpm-event
     - apache2-utils
-    - libapache2-mod-fastcgi
-    - libapache2-mod-rpaf
     - ufw
   notify: restart apache2
   tags: hswong3i.apache2
