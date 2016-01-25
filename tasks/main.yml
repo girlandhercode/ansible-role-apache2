@@ -3,39 +3,30 @@
 
 - name: apt-add-repository
   apt_repository:
-    repo="{{ item }}"
-    state=present
+    repo={{ item.repo }}
+    state={{ item.state }}
   with_items:
-    - ppa:ondrej/apache2
-  tags: hswong3i.apache2
-
-- name: apt-get purge
-  apt:
-    name="{{ item }}"
-    state=absent
-    purge=yes
-  with_items:
-    - apache2-mpm-itk
-    - apache2-mpm-prefork
-    - apache2-mpm-worker
-    - apache2-suexec-custom
-    - libapache2-mod-fastcgi
-    - libapache2-mod-fcgid
-    - libapache2-mod-rpaf
-  notify: restart apache2
+    - { repo: 'ppa:ondrej/apache2', state: 'present' }
   tags: hswong3i.apache2
 
 - name: apt-get install
   apt:
-    name="{{ item }}"
-    state=latest
+    name={{ item.name }}
+    state={{ item.state }}
   with_items:
-    - apache2
-    - apache2-bin
-    - apache2-data
-    - apache2-doc
-    - apache2-utils
-    - ufw
+    - { name: 'apache2', state: 'latest' }
+    - { name: 'apache2-bin', state: 'latest' }
+    - { name: 'apache2-data', state: 'latest' }
+    - { name: 'apache2-doc', state: 'latest' }
+    - { name: 'apache2-mpm-itk', state: 'absent' }
+    - { name: 'apache2-mpm-prefork', state: 'absent' }
+    - { name: 'apache2-mpm-worker', state: 'absent' }
+    - { name: 'apache2-suexec-custom', state: 'absent' }
+    - { name: 'apache2-utils', state: 'latest' }
+    - { name: 'libapache2-mod-fastcgi', state: 'absent' }
+    - { name: 'libapache2-mod-fcgid', state: 'absent' }
+    - { name: 'libapache2-mod-rpaf', state: 'absent' }
+    - { name: 'ufw', state: 'latest' }
   notify: restart apache2
   tags: hswong3i.apache2
 
@@ -54,8 +45,8 @@
 
 - name: enable module
   apache2_module:
-    name="{{ item }}"
-    state=present
+    name={{ item.name }}
+    state={{ item.state }}
   with_items: apache2_module_name
   notify: restart apache2
   tags: hswong3i.apache2
@@ -67,11 +58,11 @@
 
 - name: enable incomming connection
   ufw:
-    to_port={{ item }}
-    proto=tcp
-    rule=allow
+    to_port={{ item.to_port }}
+    proto={{ item.proto }}
+    rule={{ item.rule }}
   with_items:
-    - "{{ apache2_http_port }}"
-    - "{{ apache2_https_port }}"
+    - { to_port: "{{ apache2_http_port }}", proto: 'tcp', rule: 'allow' }
+    - { to_port: "{{ apache2_https_port }}", proto: 'tcp', rule: 'allow' }
   notify: restart apache2
   tags: hswong3i.apache2
