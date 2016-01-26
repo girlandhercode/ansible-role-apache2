@@ -6,7 +6,7 @@
     repo={{ item.repo }}
     state={{ item.state }}
   with_items:
-    - { repo: 'ppa:ondrej/apache2', state: 'present' }
+    - { state: 'present', repo: 'ppa:ondrej/apache2' }
   tags: hswong3i.apache2
 
 - name: apt-get install
