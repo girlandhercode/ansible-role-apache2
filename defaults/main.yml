@@ -8,7 +8,6 @@ apache2_log_level: warn
 apache2_module_name: [
   { state: 'absent', name: 'mpm_prefork' },
   { state: 'absent', name: 'mpm_worker' },
-  { state: 'absent', name: 'php7.0' },
   { state: 'present', name: 'access_compat' },
   { state: 'present', name: 'actions' },
   { state: 'present', name: 'alias' },
