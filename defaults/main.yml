@@ -23,6 +23,8 @@ apache2_module_name: [
   { name: 'filter', state: 'present' },
   { name: 'mime', state: 'present' },
   { name: 'mpm_event', state: 'present' },
+  { name: 'mpm_prefork', state: 'absent' },
+  { name: 'mpm_worker', state: 'absent' },
   { name: 'negotiation', state: 'present' },
   { name: 'proxy', state: 'present' },
   { name: 'proxy_fcgi', state: 'present' },
