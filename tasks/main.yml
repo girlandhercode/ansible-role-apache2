@@ -14,19 +14,19 @@
     name={{ item.name }}
     state={{ item.state }}
   with_items:
-    - { name: 'apache2', state: 'latest' }
-    - { name: 'apache2-bin', state: 'latest' }
-    - { name: 'apache2-data', state: 'latest' }
-    - { name: 'apache2-doc', state: 'latest' }
-    - { name: 'apache2-mpm-itk', state: 'absent' }
-    - { name: 'apache2-mpm-prefork', state: 'absent' }
-    - { name: 'apache2-mpm-worker', state: 'absent' }
-    - { name: 'apache2-suexec-custom', state: 'absent' }
-    - { name: 'apache2-utils', state: 'latest' }
-    - { name: 'libapache2-mod-fastcgi', state: 'absent' }
-    - { name: 'libapache2-mod-fcgid', state: 'absent' }
-    - { name: 'libapache2-mod-rpaf', state: 'absent' }
-    - { name: 'ufw', state: 'latest' }
+    - { state: 'absent', name: 'apache2-mpm-itk' }
+    - { state: 'absent', name: 'apache2-mpm-prefork' }
+    - { state: 'absent', name: 'apache2-mpm-worker' }
+    - { state: 'absent', name: 'apache2-suexec-custom' }
+    - { state: 'absent', name: 'libapache2-mod-fastcgi' }
+    - { state: 'absent', name: 'libapache2-mod-fcgid' }
+    - { state: 'absent', name: 'libapache2-mod-rpaf' }
+    - { state: 'latest', name: 'apache2' }
+    - { state: 'latest', name: 'apache2-bin' }
+    - { state: 'latest', name: 'apache2-data' }
+    - { state: 'latest', name: 'apache2-doc' }
+    - { state: 'latest', name: 'apache2-utils' }
+    - { state: 'latest', name: 'ufw' }
   notify: restart apache2
   tags: hswong3i.apache2
 
